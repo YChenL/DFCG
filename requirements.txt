@@ -1,0 +1,5 @@
+tensorflow-gpu==2.7
+tensorflow_addons
+numpy 
+opencv
+matplotlib
