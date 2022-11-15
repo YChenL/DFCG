@@ -17,7 +17,7 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 ![Overviwes of DeflickerCycleGAN](/Figs/model.png)
 
 ## **3. Proposed flicker loss & gradient loss**
-<img src="/Figs/distortions.png" width="38.4%" alt=""/> 
+<img src="/Figs/distortions.png" width="40.53%" alt=""/> 
 
 
 
