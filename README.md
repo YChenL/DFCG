@@ -7,7 +7,7 @@ Due to the influence of the AC-powered grid, the luminance of indoor lighting de
 recorded by cameras with CMOS sensors at some shutter speeds. It leads to banding artifacts and decreases the quality of the captured photos, making the visual
 perception unpleasant and even impairing the performance of downstream tasks.
 
-<img src="/Figs/reason.png" width="43.5%" alt=""/>    <img src="/Figs/flicker.png" width="46%" alt=""/>
+<img src="/Figs/reason.png" width="43.5%" alt=""/>    <img src="/Figs/flicker.png" width="46.17%" alt=""/>
 
 ## **2. Introduction**
 DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.10593.pdf) for single-image de-flickering. Compared to the original CycleGAN, DeflickerCycleGAN employs two novel and effective loss functions, which are proposed according to the physical characteristics of flickers, i.e., the flicker loss and the gradient loss. They significantly improve the deflickering performance. Specifically, they effectively alleviate the phenomenon of incomplete elimination and color shift in the original CycleGAN. In addition, DeflickerCycleGAN may also have reference value for the removal of the flickers in video and the moiré patterns.
