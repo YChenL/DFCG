@@ -17,5 +17,9 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 ![Overviwes of DeflickerCycleGAN](/Figs/model.png)
 
 ## **3. Proposed flicker loss & gradient loss**
+![Overviwes of DeflickerCycleGAN](/Figs/flicker loss.png)
+
+
+
 **gradient loss** is formulated as: 
 $$\mathcal{L}(R)=\mathbb{E}{y\sim p_{data}(y)}[||\nabla_n y - \nabla_n R(y)||_2 + ||\nabla_m R(y)||2]$$
