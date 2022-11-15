@@ -17,4 +17,4 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 ## **3. Proposed flicker loss and gradient loss**
 
 gradient loss is formulated as: 
-$$ a^2 + b^2 = c^2
+$$ a^2 + b^2 = c^2 $$
