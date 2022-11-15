@@ -60,9 +60,30 @@ result = Deflkcyclegan.DFcycgan._call(img, model='rem')
 # model=='rem': remove flickers; model=='gen': generate flicker
 ```
 ### Classification
-you can utilize Deflkcyclegan.DFcycgan.classify( ) & Deflkcyclegan.DFcycgan.ROC_curve( ) to achieve the classification and obtain the ROC curve (Fig.10 in the paper)
+you can utilize **Deflkcyclegan.DFcycgan.classify( )** & **Deflkcyclegan.DFcycgan.ROC_curve( )** to achieve the classification and obtain the ROC curve (Fig.10 in the paper)
 ```
-img, mode='full'
+DX, DY, DF = Deflkcyclegan.DFcycgan.classify(img, mode='full') 
+# mode list = ['full', '(4)', '(8)', '(16)', '(4,8)', '(4,16)', '(8,16)']
+    '''
+    for Dx:
+       TP: DX >= threshold
+       FP: DX >= threshold
+       TN: DX <  threshold
+       FN: DX <  threshold
+                 
+    for Dy:
+       TP: DY  < threshold
+       FP: DY  < threshold
+       TN: DY >= threshold
+       FN: DT >= threshold
+
+    for Dx + Dy:
+       TP: DF[:,0] >= threshold
+       FP: DF[:,0] >= threshold
+       TN: DF[:,0] <  threshold
+       FN: DF[:,0] <  threshold    
+    '''
+ROC_curve = Deflkcyclegan.DFcycgan.ROC_curve(tp, fp)
 ```
  ...
 ### Dependencies
