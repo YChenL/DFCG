@@ -7,7 +7,7 @@ Due to the influence of the AC-powered grid, the luminance of indoor lighting de
 recorded by cameras with CMOS sensors at some shutter speeds. It leads to banding artifacts and decreases the quality of the captured photos, making the visual
 perception unpleasant and even impairing the performance of downstream tasks.
 
-<img src="/Figs/flicker.png" width="48.4%" alt=""/>  <img src="/Figs/reason.png" width="50.5%" alt=""/> 
+<img src="/Figs/flicker.png" width="40.2%" alt=""/>  <img src="/Figs/reason.png" width="41.97%" alt=""/> 
 
 ## **2. Introduction**
 DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.10593.pdf) for flickering image detection and single-image de-flickering. Compared to the conventional CycleGAN, DeflickerCycleGAN employs two novel and effective loss functions, which are proposed according to the physical characteristics of flickers, i.e., the **flicker loss** and the **gradient loss**. They can significantly improve the deflickering performance. To be specific, the combination of flicker loss and gradient loss effectively alleviates the phenomenon of incomplete elimination and color shift in the original CycleGAN. In addition, DeflickerCycleGAN may also have reference value for the removal of the flickers in video and the moiré patterns.
@@ -17,7 +17,7 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 ![Overviwes of DeflickerCycleGAN](/Figs/model.png)
 
 ## **3. Proposed flicker loss & gradient loss**
-<img src="/Figs/distortions.png" width="48.4%" alt=""/>  <img src="/Figs/flk_loss.png" width="50.5%" alt=""/> 
+<img src="/Figs/distortions.png" width="38.4%" alt=""/>  <img src="/Figs/flk_loss.png" width="40.5%" alt=""/> 
 
 
 **gradient loss** is formulated as: 
