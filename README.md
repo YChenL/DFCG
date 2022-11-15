@@ -30,3 +30,9 @@ Start from the existing environment
 ```
 pip install -r requirements.txt
 ```
+
+### Notes
+
+If you meet any problems about this repository, **Please contact with me by E-mail <21013082029@stu.hqu.edu.cn> or <2667392087@qq.com> and you can also ask me from the 'issue' part in Github.** 
+
+If you improve the result based on this repository by some methods, please let me know. Thanks!
