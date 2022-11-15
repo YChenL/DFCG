@@ -54,6 +54,16 @@ Deflkcyclegan.DFcycgan.save_params(save_path) # save the checkpoints
 Deflkcyclegan.DFcycgan.load_params(load_path) # load the checkpoints
 ```
 ## Evaluate the performance
+### Remove & Generate the flicker in a single image
+```
+result = Deflkcyclegan.DFcycgan._call(img, model='rem')  
+# model=='rem': remove flickers; model=='gen': generate flicker
+```
+### Classification
+you can utilize Deflkcyclegan.DFcycgan.classify( ) & Deflkcyclegan.DFcycgan.ROC_curve( ) to achieve the classification and obtain the ROC curve (Fig.10 in the paper)
+```
+img, mode='full'
+```
  ...
 ### Dependencies
 Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
