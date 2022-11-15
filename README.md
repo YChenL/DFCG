@@ -14,7 +14,6 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ![Overviwes of DeflickerCycleGAN](/Figs/overview.png "Fig 1: Overview of DeflickerCycleGAN")
 
-## **3. Proposed flicker loss and gradient loss**
-
 gradient loss is formulated as: 
-$$ a^2 + b^2 = c^2 $$
+**The Cauchy-Schwarz Inequality**
+$$\mathcal{L}(R)=\mathbb{E}{y\sim p_{data}(y)}[||\nabla_n y - \nabla_n R(y)||_2 + ||\nabla_m R(y)||2]$$
