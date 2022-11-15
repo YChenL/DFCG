@@ -16,3 +16,17 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ![Overviwes of DeflickerCycleGAN](/Figs/model.png)
 
+## Dependencies
+Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
+
+Start from building the environment
+```
+conda create -n DFcyclegan python=3.9 anaconda
+conda activate DFcyclegan
+pip install -r requirements.txt
+```
+
+Start from the existing environment
+```
+pip install -r requirements.txt
+```
