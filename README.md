@@ -23,8 +23,15 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 ![Overviwes of DeflickerCycleGAN](/Figs/photo.png)
 
 ## Train your model
- ...
- ### visualize the training 
+&emsp;### Prepare the data pipeline
+
+&ensp;you can utilize **Dataset.dataset.DataLoader()** to obtain the train and eval pipeline
+&ensp;training_path=['flickering images path'. 'flicker-free_images path']
+&ensp;testing_path=['flickering images path'. 'flicker-free_images path']
+&ensp;```
+      train_set, eval_set = Dataset.dataset.DataLoader(training_path, testing_path)
+      ```
+&emsp;### visualize the training 
 ## Evaluate the performance
  ...
 ### Dependencies
