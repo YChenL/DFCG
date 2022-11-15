@@ -1,5 +1,5 @@
 # **DeflickerCycleGAN v1.0**
-An offcial implement of "DeflickerCycleGAN : learning to detect an remove flickers in a single image" with tensorflow <https://www.tensorflow.org/>
+An offcial implement of "DeflickerCycleGAN : learning to detect an remove flickers in a single image" with tensorflow[^1]. Tensorflow: <https://www.tensorflow.org/>.
 It is an interesting and practical framework for eleminate the flickers in images. The details can be found in the paper, which is submitted to TIP.
 
 ## **1. Introduction**
