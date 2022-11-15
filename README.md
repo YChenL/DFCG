@@ -16,10 +16,8 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ## **3. Proposed flicker loss and gradient loss**
 
-$\mathcal{L}_{\rm grad}$ is formulated as: 
-\begin{equation}\label{Equ 10}
-    \mathcal{L}_{{\rm grad}}(R) =\mathbb{E}_{y\sim p_{data}\;\ (y)}[\,|\!|\nabla_n y - \nabla_n R(y)|\!|_2\,] + |\!|\nabla_m R(y)|\!|_2\,],
-\end{equation}
+gradient loss is formulated as: 
+![](https://latex.codecogs.com/svg.image?\bg{white}\begin{equation}&space;\vspace{2mm}&space;\mathcal{L}_{{\rm&space;grad}}(R)&space;=\mathbb{E}_{y\sim&space;p_{data}(y)}[||\nabla_n&space;y&space;-&space;\nabla_n&space;R(y)||_2]&space;&plus;&space;||\nabla_m&space;R(y)||_2],\end{equation})
 
 $\mathcal{L}_{\rm flk}$ is proposed for keeping the average of the image column during the deflickering phase. For the mapping $R:Y\mapsto X$, $\mathcal{L}_{\rm flk}$ is defined as:
 \begin{align}\label{Equ 11}
