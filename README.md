@@ -12,7 +12,9 @@ perception unpleasant and even impairing the performance of downstream tasks.
 ## **2. Introduction**
 DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.10593.pdf) for flickering image detection and single-image de-flickering. Compared to the conventional CycleGAN, DeflickerCycleGAN employs two novel and effective loss functions, which are proposed according to the physical characteristics of flickers, i.e., the flicker loss and the gradient loss. They can significantly improve the deflickering performance. To be specific, the combination of flicker loss and gradient loss effectively alleviates the phenomenon of incomplete elimination and color shift in the original CycleGAN. In addition, DeflickerCycleGAN may also have reference value for the removal of the flickers in video and the moiré patterns.
 
-![Overviwes of DeflickerCycleGAN](/Figs/overview.png "Fig 1: Overview of DeflickerCycleGAN")
+![Overviwes of DeflickerCycleGAN](/Figs/overview.png)
+
+![Overviwes of DeflickerCycleGAN](/Figs/model.png)
 
 **gradient loss** is formulated as: 
 $$\mathcal{L}(R)=\mathbb{E}{y\sim p_{data}(y)}[||\nabla_n y - \nabla_n R(y)||_2 + ||\nabla_m R(y)||2]$$
