@@ -6,8 +6,10 @@ It is an interesting and practical framework for eleminate the flickers in image
 Due to the influence of the AC-powered grid, the luminance of indoor lighting devices will be changed sinusoidally. This phenomenon is invisible, while it is inevitably
 recorded by cameras with CMOS sensors at some shutter speeds. It leads to banding artifacts and decreases the quality of the captured photos, making the visual
 perception unpleasant and even impairing the performance of downstream tasks.
-![Reason](/Figs/reason.png =40x40 "Fig 2: Modeling of flickering images")
-![Example of a flickering image](/Figs/flicker.png =40x40 "Fig 2: Example of a flickering image")
+
+![Reason](/Figs/reason.png =40x40)
+
+![Example of a flickering image](/Figs/flicker.png =40x40)
 
 
 ## **2. Introduction**
