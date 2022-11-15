@@ -23,15 +23,29 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 ![Overviwes of DeflickerCycleGAN](/Figs/photo.png)
 
 ## Train your model
-&emsp;### Prepare the data pipeline
+### Prepare the data pipeline
+you can utilize **Dataset.dataset.DataLoader()** to obtain the train and eval pipeline.
+```
+training_path=['flickering images path'. 'flicker-free_images path']
+testing_path=['flickering images path'. 'flicker-free_images path']
+train_set, eval_set = Dataset.dataset.DataLoader(training_path, testing_path)
+```
+### training
+you can utilize **Deflkcyclegan.DFcycgan.train_model()** to begin the training.
+```
+for epochs in range(args.EPOCHS):
+      for flk_img, flk_free_img in train_set:
+            Deflkcyclegan.DFcycgan.train_model(flk_img, flk_free_img)      
+```
+### visualization
+you can utilize **Deflkcyclegan.DFcycgan.generate_images()** to visualize the training processing.
+```
+ for flk_img, flk_free_img in eval_set.take(n)
+      Deflkcyclegan.DFcycgan.generate_images(flk_img, flk_free_img)     
+```
+### save & load checkpoints
+you can utilize **Deflkcyclegan.DFcycgan.save_params()** and **Deflkcyclegan.DFcycgan.load_params()** to save and load the checkpoints.
 
-&ensp;you can utilize **Dataset.dataset.DataLoader()** to obtain the train and eval pipeline
-&ensp;training_path=['flickering images path'. 'flicker-free_images path']
-&ensp;testing_path=['flickering images path'. 'flicker-free_images path']
-&ensp;```
-      train_set, eval_set = Dataset.dataset.DataLoader(training_path, testing_path)
-      ```
-&emsp;### visualize the training 
 ## Evaluate the performance
  ...
 ### Dependencies
