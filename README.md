@@ -8,4 +8,6 @@ recorded by cameras with CMOS sensors at some shutter speeds. It leads to bandin
 perception unpleasant and even impairing the performance of downstream tasks.
 
 ## **2. Introduction**
+DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.10593.pdf) for single-image de-flickering. Compared to the original CycleGAN, DeflickerCycleGAN employs two novel and effective loss functions, which are proposed according to the physical characteristics of flickers, i.e., the flicker loss and the gradient loss. They significantly improve the deflickering performance. Specifically, they effectively alleviate the phenomenon of incomplete elimination and color shift in the original CycleGAN. In addition, DeflickerCycleGAN may also have reference value for the removal of the flickers in video and the moiré patterns.
+
 ![Overviwes of DeflickerCycleGAN](/Figs/overview.png "Fig 1: Overview of DeflickerCycleGAN")
