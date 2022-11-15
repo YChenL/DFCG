@@ -16,7 +16,12 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ![Overviwes of DeflickerCycleGAN](/Figs/model.png)
 
-## Dependencies
+## De-flickering results
+
+
+
+
+### Dependencies
 Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
 
 Start from building the environment
