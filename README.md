@@ -22,7 +22,11 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ![Overviwes of DeflickerCycleGAN](/Figs/photo.png)
 
-
+## Train your model
+ ...
+ ### visualize the training 
+## Evaluate the performance
+ ...
 ### Dependencies
 Note: That is the setting based on my device, you can modify the torch and torchaudio version based on your device.
 
