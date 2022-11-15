@@ -7,9 +7,9 @@ Due to the influence of the AC-powered grid, the luminance of indoor lighting de
 recorded by cameras with CMOS sensors at some shutter speeds. It leads to banding artifacts and decreases the quality of the captured photos, making the visual
 perception unpleasant and even impairing the performance of downstream tasks.
 
-![Reason](/Figs/reason.png =40x40)
+![Reason](/Figs/reason.png)
 
-![Example of a flickering image](/Figs/flicker.png =40x40)
+![Example of a flickering image](/Figs/flicker.png)
 
 
 ## **2. Introduction**
