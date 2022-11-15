@@ -18,7 +18,9 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ## De-flickering results
 
+![Overviwes of DeflickerCycleGAN](/Figs/syn.png)
 
+![Overviwes of DeflickerCycleGAN](/Figs/photo.png)
 
 
 ### Dependencies
