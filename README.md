@@ -45,12 +45,14 @@ for epochs in range(args.EPOCHS):
 ### visualization
 you can utilize **Deflkcyclegan.DFcycgan.generate_images( )** to visualize the training processing.
 ```
- for flk_img, flk_free_img in eval_set.take(n)
-      Deflkcyclegan.DFcycgan.generate_images(flk_img, flk_free_img)     
+for flk_img, flk_free_img in eval_set.take(n)
+     Deflkcyclegan.DFcycgan.generate_images(flk_img, flk_free_img)     
 ```
 ### save & load checkpoints
-you can utilize **Deflkcyclegan.DFcycgan.save_params( )** and **Deflkcyclegan.DFcycgan.load_params( )** to save and load the checkpoints.
-
+```
+Deflkcyclegan.DFcycgan.save_params(save_path) # save the checkpoints
+Deflkcyclegan.DFcycgan.load_params(load_path) # load the checkpoints
+```
 ## Evaluate the performance
  ...
 ### Dependencies
