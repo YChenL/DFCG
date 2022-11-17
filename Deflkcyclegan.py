@@ -14,7 +14,7 @@ from utils import read_img, exp_dim
 
 class DFcycgan(Model):
     def __init__(self, Model_arch, initial_learning_rate = 1e-04, 
-                 model_name = ['G', 'R', 'Dx', 'Dy', 'optms_G', 'optms_R', 'optms_Dx', 'optms_Dy']):
+                 model_name = ['G', 'R', 'Dx', 'Dy', 'optms_G', 'optms_R', 'optms_Dx', 'optms_Dy'], **kwargs):
         super(DFcycgan, self).__init__()
         if  Model_arch == 'samescale':          
             self.G  = samescale.Generator()    
