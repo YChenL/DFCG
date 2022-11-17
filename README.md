@@ -110,5 +110,6 @@ If you improve the result based on this repository by some methods, please let m
 
 ### Reference
 [CycleGAN](https://arxiv.org/pdf/1703.10593.pdf).
+
 [Baseline of conventional single image deflickering method](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/8652/865207/Reducing-flicker-due-to-ambient-illumination-in-camera-captured-images/10.1117/12.2008271.short?SSO=1)
 
