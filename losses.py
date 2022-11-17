@@ -130,11 +130,11 @@ def flicker_loss(img1, img2):
 def gradient_loss(gen_img, real_img):
     h_x = gen_img.shape[2] 
     v_x = gen_img.shape[1]
-    h_tv_gen  = gen_img[:,:,1:,:] -gen_img[:,:,:h_x-1,:]
-    h_tv_real = real_img[:,:,1:,:]-real_img[:,:,:h_x-1,:]
-    h_tv_diff = tf.reduce_mean(tf.pow((h_tv_gen - h_tv_real),2))    
-    v_tv      = tf.math.reduce_std(gen_img[:,1:,:,:]-gen_img[:,:v_x-1,:,:])
-    return h_tv_diff + v_tv
+    h_tv_gen  = gen_img[:,:,1:,:]  - gen_img[:,:,:h_x-1,:]
+    v_tv_gen  = gen_img[:,1:,:,:]  - gen_img[:,:v_x-1,:,:]
+    h_tv_real = real_img[:,:,1:,:] -real_img[:,:,:h_x-1,:]
+    h_tv_diff = h_tv_gen - h_tv_real
+    return tf.reduce_mean(tf.pow(h_tv_diff, 2)) + tf.reduce_mean(tf.pow(v_tv_gen, 2))
 
 
 def get_mid(real, fake):
