@@ -24,16 +24,16 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 
 ## Prepare the data pipeline
-you can utilize *Dataset.dataset.DataLoader( )* to obtain the train and eval pipeline.
+you can utilize *Dataset.synthesize_data.synthsize( )* to synthetic the flickering images and prepare your training data.
+```
+syn_img = synthsize(file_path, model=0)
+# model 0 —> lighting conditions: Flourescent Light; model 1 —> lighting conditions: LED
+```
+and we also provide a demo dataset, which can be downloaded at <https://drive.google.com/file/d/1yJfM-ZnbzAbS5JX72u4s7dCuwO2TlnCX/view?usp=sharing>. You can directly use the demo dataset with *Dataset.dataset.DataLoader( )* to obtain the train and eval data pipelines easily.
 ```
 training_path=['flickering images path'. 'flicker-free_images path']
 testing_path=['flickering images path'. 'flicker-free_images path']
 train_set, eval_set = Dataset.dataset.DataLoader(training_path, testing_path)
-```
-and you can also utilize *Dataset.synthesize_data.synthsize( )* to synthetic the flickering images accordings to the characteristics of flicker.
-```
-syn_img = synthsize(file_path, model=0)
-# model 0 —> lighting conditions: Flourescent Light; model 1 —> lighting conditions: LED
 ```
 ## Train your model
 ### training
