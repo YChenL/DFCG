@@ -54,6 +54,7 @@ for flk_img, flk_free_img in eval_set.take(n)
 Deflkcyclegan.DFcycgan.save_params(save_path) # save the checkpoints
 Deflkcyclegan.DFcycgan.load_params(load_path) # load the checkpoints
 ```
+### or you can directly run the **trainDFcycleGAN.py** to begin the training
 ## Evaluate the performance
 ### Remove & Generate the flicker in a single image
 ```
