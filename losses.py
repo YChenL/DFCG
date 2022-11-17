@@ -110,7 +110,7 @@ def tf_ms_ssim_l1_loss(img1, img2, mean_metric=True, alpha=0.84):
         return loss_map
 
 
-def flicker_loss(img1, img2): 
+def flicker_loss_sim(img1, img2): 
     avg_row_img1 = tf.reduce_mean(img1, axis=1, keepdims=True)
     avg_row_img2 = tf.reduce_mean(img2, axis=1, keepdims=True)
     k = tf.reduce_mean(tf.pow(tf.pow(avg_row_img2-avg_row_img1, 2), 0.5))    
@@ -118,7 +118,7 @@ def flicker_loss(img1, img2):
 
 
 
-def flicker_loss_complex(img1, img2): 
+def flicker_loss(img1, img2): 
     mean_rgb1 = tf.reduce_mean(img1, axis=1, keepdims=True)
     mr1, mg1, mb1 = tf.split(mean_rgb1, 3, axis=-1)   
     mean_rgb2 = tf.reduce_mean(img2, axis=1, keepdims=True)
@@ -130,12 +130,11 @@ def flicker_loss_complex(img1, img2):
 def gradient_loss(gen_img, real_img):
     h_x = gen_img.shape[2] 
     v_x = gen_img.shape[1]
-    count_v = v_x * (h_x - 1)
     h_tv_gen  = gen_img[:,:,1:,:] -gen_img[:,:,:h_x-1,:]
     h_tv_real = real_img[:,:,1:,:]-real_img[:,:,:h_x-1,:]
     h_tv = tf.reduce_mean(tf.pow((h_tv_gen - h_tv_real),2))    
     v_tv = tf.math.reduce_std(gen_img[:,1:,:,:]-gen_img[:,:v_x-1,:,:])
-    return h_tv + (v_tv/count_v)
+    return h_tv + v_tv
 
 
 def get_mid(real, fake):
