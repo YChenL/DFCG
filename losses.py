@@ -110,18 +110,18 @@ def tf_ms_ssim_l1_loss(img1, img2, mean_metric=True, alpha=0.84):
         return loss_map
 
 
-def flicker_loss_sim(img1, img2): 
-    avg_row_img1 = tf.reduce_mean(img1, axis=1)
-    avg_row_img2 = tf.reduce_mean(img2, axis=1)
+def flicker_loss(img1, img2): 
+    avg_row_img1 = tf.reduce_mean(img1, axis=1, keepdims=True)
+    avg_row_img2 = tf.reduce_mean(img2, axis=1, keepdims=True)
     k = tf.reduce_mean(tf.pow(tf.pow(avg_row_img2-avg_row_img1, 2), 0.5))    
     return k
 
 
 
-def flicker_loss(img1, img2): 
-    mean_rgb1 = tf.reduce_mean(img1,[1,2],keepdims=True)
+def flicker_loss_complex(img1, img2): 
+    mean_rgb1 = tf.reduce_mean(img1, axis=1, keepdims=True)
     mr1, mg1, mb1 = tf.split(mean_rgb1, 3, axis=-1)   
-    mean_rgb2 = tf.reduce_mean(img2,[1,2],keepdims=True)
+    mean_rgb2 = tf.reduce_mean(img2, axis=1, keepdims=True)
     mr2, mg2, mb2 = tf.split(mean_rgb2, 3, axis=-1)   
     k = tf.pow(tf.pow(mr2-mr1, 2) + tf.pow(mg2-mg1, 2)+tf.pow(mb2-mb1, 2), 0.5)      
     return k
