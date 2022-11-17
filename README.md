@@ -22,6 +22,7 @@ DeflickerCycleGAN is a framework based on [CycleGAN](https://arxiv.org/pdf/1703.
 
 ![Overviwes of DeflickerCycleGAN](/Figs/photo.png)
 
+
 ## Prepare the data pipeline
 you can utilize **Dataset.dataset.DataLoader( )** to obtain the train and eval pipeline.
 ```
@@ -106,3 +107,8 @@ pip install -r requirements.txt
 If you meet any problems about this repository, **Please contact with me by E-mail <21013082029@stu.hqu.edu.cn> or <2667392087@qq.com> and you can also ask me from the 'issue' part in Github.** 
 
 If you improve the result based on this repository by some methods, please let me know. Thanks!
+
+### Reference
+[CycleGAN](https://arxiv.org/pdf/1703.10593.pdf).
+[Baseline of conventional single image deflickering method](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/8652/865207/Reducing-flicker-due-to-ambient-illumination-in-camera-captured-images/10.1117/12.2008271.short?SSO=1)
+
