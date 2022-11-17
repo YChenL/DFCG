@@ -59,7 +59,7 @@ def data_list(train_path):
 
     
     
-def DataLoader(train_path, eval_path, buffer_size, batch_size):
+def DataLoader(train_path, eval_path, buffer_size, batch_size, **kwargs):
     train_flk, train_flk_free = data_list(train_path)
     test_flk, test_flk_free   = data_list(eval_path)  
     
