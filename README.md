@@ -1,6 +1,5 @@
 # **DeflickerCycleGAN v1.0**
-An offcial implement of "DeflickerCycleGAN : learning to detect and remove flickers in a single image" with [tensorflow](https://www.tensorflow.org/).
-It is an interesting and practical framework for eleminate the flickers in images. The details can be found in the paper, which is submitted to TIP.
+It is an interesting and practical framework for eleminate the flickers in images.
 
 ## **Background**
 Due to the influence of the AC-powered grid, the luminance of indoor lighting devices will be changed sinusoidally. This phenomenon is invisible, while it is inevitably
