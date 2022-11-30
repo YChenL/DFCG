@@ -1,4 +1,4 @@
-# **DeflickerCycleGAN v1.0**
+# **DFCGAN v1.0**
 It is an interesting and practical framework for eleminate the flickers in images.
 
 ## **Background**
